@@ -3,15 +3,9 @@ import User from "./User";
 
 import classes from "./Users.module.css";
 
-const DUMMY_USERS = [
-  { id: "u1", name: "Max" },
-  { id: "u2", name: "Manuel" },
-  { id: "u3", name: "Julie" },
-];
-
 class Users extends Component {
   // Intialising the state.
-  constructor(props) {
+  constructor() {
     // In Class component your state is always an object unlike functional component.
     // Always use super() when you use constructor.
     super();
