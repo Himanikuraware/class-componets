@@ -11,7 +11,7 @@ const DUMMY_USERS = [
 
 class Users extends Component {
   // Intialising the state.
-  constructor() {
+  constructor(props) {
     // In Class component your state is always an object unlike functional component.
     // Always use super() when you use constructor.
     super();
@@ -32,7 +32,7 @@ class Users extends Component {
     // When you declare const using const inside the render method then you no need to add this keyword for accessing that like in usersList.
     const usersList = (
       <ul>
-        {DUMMY_USERS.map((user) => (
+        {this.props.users.map((user) => (
           <User key={user.id} name={user.name} />
         ))}
       </ul>
